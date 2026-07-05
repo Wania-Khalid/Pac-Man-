@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build PacMan",
+            "type": "shell",
+            "command": "C:/msys64/mingw64/bin/g++.exe",
+            "args": [
+                "src/main.cpp",
+                "src/Game.cpp",
+                "src/Maze.cpp",
+                "src/Player.cpp",
+                "src/Ghost.cpp",
+                "src/Pellet.cpp",
+                "src/UI.cpp",
+
+                "-std=c++17",
+
+                "-IC:/msys64/mingw64/include",
+                "-Iinclude",
+
+                "-LC:/msys64/mingw64/lib",
+
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system",
+
+                "-o",
+                "PacMan.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
